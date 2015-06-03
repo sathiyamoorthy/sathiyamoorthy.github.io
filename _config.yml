@@ -1,18 +1,61 @@
-# Site settings
-title: blog.kishore-m.com
-sub_title: A blog on everything (mostly on Ruby).
-email: kishorevlrtn@gmail.com
-description: "I'm Kishore. A software developer currently living in Bangalore, India and working for a Sonata Software. I'm also very fascinated by technolog and keep write coding"
-url: "http://blog.kishore-m.com/"
+# Site wide configuration
 
-permalink: pretty
+title:            Let's Geek
+locale:           en_US
+url:              http://blog.kishore-m.com/
+url: http://localhost:4000
 
-twitter_username: kishorevlrtn
-github_username: kishore-mohan
-facebook_username: kishore.mohan.165
 
-# Build settings
-markdown: kramdown
+# Jekyll configuration
 
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
 gems:
-  - jekyll-redirect-from
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Kishore Mohan
+  avatar: bio-photo.jpg
+  bio: "I'm Kishore. A software developer currently living in Bangalore, India and working for a Sonata Software. I'm also very fascinated by technolog and love to keep writing coding"
+  email: kishorevlrtn@gmail.com
+  disqus-shortname: 
+  twitter: kishorevlrtn
+  facebook: kishore.mohan.165
+  google:
+    plus: #username
+    analytics: 
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: kishore-mohan
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
