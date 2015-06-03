@@ -1,0 +1,19 @@
+---
+layout: page
+permalink: /archive/
+sitemap:
+    priority: 0.8
+    changefreq: 'daily'
+---
+
+<section class="archive">
+  <h2>Archive</h2>
+
+  <ul class="list">
+  {% for post in site.posts %}
+    <li>
+      {{ post.date | date: "%b %-d, %Y" }} / <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>

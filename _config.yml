@@ -1,0 +1,18 @@
+# Site settings
+title: blog.kishore-m.com
+sub_title: A blog on everything (mostly on Ruby).
+email: kishorevlrtn@gmail.com
+description: "I'm Kishore. A software developer currently living in Bangalore, India and working for a Sonata Software. I'm also very fascinated by technolog and keep write coding"
+url: "http://blog.kishore-m.com/"
+
+permalink: pretty
+
+twitter_username: kishorevlrtn
+github_username: kishore-mohan
+facebook_username: kishore.mohan.165
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-redirect-from

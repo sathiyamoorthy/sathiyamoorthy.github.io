@@ -1,0 +1,7 @@
+<article class="post">
+  <h2><a href="{% if post.url %}{{ post.url | prepend: site.baseurl }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{% if post.title %}{{ post.title }}{% else %}{{ page.title }}{% endif %}</a></h2>
+  <p class="lead">{% if post.date %}{{ post.date | date: "%b %-d, %Y" }}{% else %}{{ page.date | date: "%b %-d, %Y" }}{% endif %} / <a href="{% if post.url %}{{ post.url | prepend: site.baseurl }}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">Discussion</a></p>
+  {{ content }}
+</article>
+
+{% include subscribe.html %}

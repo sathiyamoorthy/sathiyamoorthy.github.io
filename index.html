@@ -1,1 +1,66 @@
-Ksihroe blog
+---
+layout: default
+sitemap:
+    priority: 0.8
+    changefreq: 'daily'
+---
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Most recent</h4>
+        {% assign post = site.posts.first %}
+        {% assign content = post.content %}
+        {% include post.html %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="archive">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>A little older</h4>
+
+        <ul class="list">
+        {% for post in site.posts limit:5 offset:1 %}
+          <li>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <p class="sub">{{ post.date | date: "%b %-d, %Y" }} / <a href="{{ post.url | prepend: site.baseurl }}">Discussion</a></p>
+          </li>
+        {% endfor %}
+        </ul>
+
+        <p>For more articles just like these, see <a href="/archive/">the archive</a>...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="best">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Best of</h4>
+
+        <ul class="list">
+        {% assign count = 0 %}
+        {% for post in site.posts %}
+          {% if post.bestof %}
+            {% assign count = count | plus:1 %}
+            {% if count <= 5 %}
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <p class="sub">{{ post.date | date: "%b %-d, %Y" }} / <a href="{{ post.url | prepend: site.baseurl }}">Discussion</a></p>
+            </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        </ul>
+
+        <p>You can also see a <a href="/best/">full listing of my best of</a> articles...</p>
+      </div>
+    </div>
+  </div>
+</section>
