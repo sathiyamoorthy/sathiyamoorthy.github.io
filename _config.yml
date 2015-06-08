@@ -3,6 +3,7 @@
 title:            Let's Geek
 locale:           en_US
 url:              http://blog.kishore-m.com/
+#url:  http://localhost:4000
 
 # Jekyll configuration
 
@@ -34,7 +35,7 @@ owner:
   facebook: kishore.mohan.165
   google:
     plus: #username
-    analytics: 
+    analytics: UA-63861353-1
     verify: 
     ad-client: 
     ad-slot: 
