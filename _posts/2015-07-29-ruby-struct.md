@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why struct? Not Hash or Openstruct?"
+title: "Why struct? Not Hash or OpenStruct?"
 excerpt: "When we want to store the key value pair most of them prefer Hash, because that is how we learned from the basic. But in real time compare to Hash and Openstruct, Struct works better than other key value storage."
 date: 2015-07-29
 status: publish
@@ -19,17 +19,17 @@ Eventually, most of them believe that hashes behave more like objects and easy t
 ###alien! code - Based on the view and approach(Hash)
 ___
 {% highlight ruby %}
-def result(type, value)
+def result(status, value)
   result= {}
-  result["type"] = type
+  result["status"] = status
   result["value"] = value
   result
 end
 
 > r = result("success", 2)  
-> r["type"] => "success"
+> r["status"] => "success"
 > r["value"] => 2
-> r[:type] => nil #symbol and string conflict
+> r[:status] => nil #symbol and string conflict
 > r[:types] => nil #Developers likes "typo" and not giving any exception
 {% endhighlight %}
 ___
@@ -41,18 +41,18 @@ Hash can be very useful when storing dyanmic keys using some logic, number of ke
 
 {% highlight ruby %}
 class Result
-  attr_accessor :type, :value
-  def initialize(type, value)
-    @type = type
+  attr_accessor :status, :value
+  def initialize(status, value)
+    @status = status
     @value = value
   end
 end
 
 > result = Result.new("success", 2)
-> result.type = "success"
+> result.status = "success"
 > result.value = 2
 > result.types 
-NoMethodError: undefined method `types' for #<Result:0x007fd1689ecfa0 @type="success", @value=2>s
+NoMethodError: undefined method `status' for #<Result:0x007fd1689ecfa0 @status="success", @value=2>s
 {% endhighlight %}
 
 Sometimes we likely to be said, "can hashes accessed like an object" the above code more looks like developer friendly and can access as a object easily get and set values from object. But it can be frustrated creating a class and initializing the variable which doesn't make sense writting two many lines.
@@ -63,11 +63,11 @@ We will found OpenStruct, it solves the problem of hash key lookup by providing 
 ___
 {% highlight ruby %}
 require "ostruct"
-result = OpenStruct.new(type: "success", value: 2)
+result = OpenStruct.new(status: "success", value: 2)
 
-> result.type = "success"
+> result.status = "success"
 > result.value = 2
-> result.types = nil # Typo or undefined keys, not give any exception
+> result.status = nil # Typo or undefined keys, not give any exception
 {% endhighlight %}
 ___
 
@@ -79,20 +79,21 @@ Struct works very similar like OpenStruct, except that it will not support dynam
 
 ___
 {% highlight ruby %}
-Result = Struct.new(:type, :value)
+Result = Struct.new(:status, :value)
 
 > result = Result.new("success", 2)
-> result.type = "success"
+> result.status = "success"
 > result.value = 2
 > result.types 
-NoMethodError: undefined method `types' for #<struct Result type="success", value=2>
-{% endhighlight %}
+NoMethodError: undefined method `types' for #<struct Result status="success", value=2>
 
 # or 
 class Result < Struct.new(:status, :value)
 end
 
 #both are same 
+{% endhighlight %}
+
 ___
 
 Struct is faster than Hash and OpenStruct, very reliable and readable code.
