@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails alias vs alias_method vs alias_method_chain"
-excerpt: "Differenece and approach between alias vs alias_method vs alias_method_chain"
+excerpt: "Differenece and approach between alias vs alias_method vs alias_method_chain. Detail explanation of alias, alias_method and alias_method_chain"
 date: 2015-07-03
 status: publish
 comments: true
@@ -10,8 +10,6 @@ categories:
 - Rails 
 tags:
 - "Rails, Ruby, alias, alias_method, alias_method_chain, kishore-mohan, kishore.M, difference between alias vs alias_method vs alias_method_chain"
-image:
-  feature: technical_books.jpg
 ---
 
 Before going to understand about the difference one should understand is this <b>method</b> or <b>keyword</b>. Believe most of them have this confusion because of the comma and passing argument to the alias we can't conclude its a method. Because **it's a Ruby keyword** (that trips every time we put a comma between the old and new method name,and the compiler complains).
