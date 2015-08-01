@@ -98,6 +98,58 @@ ___
 
 Struct is faster than Hash and OpenStruct, very reliable and readable code.
 
+###Benchmark
+
+{% highlight ruby %}
+
+require 'ostruct'
+require 'benchmark'
+COUNT = 10_000_000
+STATUS = "success"
+VALUE = "testing benchamark"
+class Result
+  attr_accessor :status, :value
+end
+Benchmark.bm(13) do |x|
+  x.report("hash:") do
+    COUNT.times do
+      p = {status: STATUS, value: VALUE}
+    end
+  end
+  x.report("openstruct:") do
+    COUNT.times do
+      p = OpenStruct.new
+      p.status = STATUS
+      p.value = VALUE
+    end
+  end
+  x.report("struct:") do
+    ResultStruct = Struct.new(:status, :value)
+    COUNT.times do
+      p = ResultStruct.new
+      p.status = STATUS
+      p.value = VALUE
+    end
+  end
+  x.report("class:") do
+    COUNT.times do
+      p = Result.new
+      p.status = STATUS
+      p.value = VALUE
+    end
+  end
+end
+
+                    user     system      total        real
+hash:           5.940000   0.100000   6.040000 (  6.047754)
+openstruct:   155.420000   0.370000 155.790000 (155.862361)
+struct:         4.360000   0.010000   4.370000 (  4.375296)
+class:          2.700000   0.010000   2.710000 (  2.712250)
+{% endhighlight %}
+
+                   
+
+
 
 
 

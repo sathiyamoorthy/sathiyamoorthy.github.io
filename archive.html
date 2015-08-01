@@ -1,19 +1,13 @@
 ---
 layout: page
-permalink: /archive/
+title : Archive
+header : Post Archive
+group: navigation
 sitemap:
     priority: 0.8
     changefreq: 'daily'
 ---
+{% include JB/setup %}
 
-<section class="archive">
-  <h2>Archive</h2>
-
-  <ul class="list">
-  {% for post in site.posts %}
-    <li>
-      {{ post.date | date: "%b %-d, %Y" }} / <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-  </ul>
-</section>
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}

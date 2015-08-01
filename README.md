@@ -1,3 +1,6 @@
-# Blog- kishroe-m.com
+dbtek.github.io
+====
 
-**[kishore-m.com](http://geek.kishore-m.com)**
+My personal blog powered by jekyll-bootstrap-3
+
+[ismaildemirbilek.com](http://ismaildemirbilek.com)

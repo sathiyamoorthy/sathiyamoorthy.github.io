@@ -36,7 +36,7 @@ That's why instance_eval()
 
 Let's get into little basic example for the usage of **alias**:
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 class User
   def name
     "Let's Geek"
@@ -54,7 +54,7 @@ OMG!! It works.. But where and why we need this alias. Lets put it into this way
 
 Now an example for the usage of alias_method:
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 class User
   def name
     "Let's Geek"
@@ -69,7 +69,7 @@ User.new.label
 
 OOPS!! this also works and seems to be the same. except one comma(,) between the two methods. But the big difference is found in scoping. Here is the example with inheritance in both ways.
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 class ParentScope
   def foo
     "I am the Parent Scope"
@@ -92,7 +92,7 @@ Looks like ChildScope#bar points to the superclass #name method and not at Child
 
 **alias_method** the convention says, a method and is executed in the current self scope.
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 class ParentScope
   def foo
     "I am the Parent Scope"
@@ -127,7 +127,7 @@ ChildScope.new.foo #=> "I am the Child Scope"
    * alias will keep the original scope when aliasing - so even if you override the method in a subclass, the aliased method will refer to the parent's original method
 
 ### Get into alias_method_chain:
-{% highlight ruby linenos %}
+{% highlight ruby %}
 
 class MeetFriend
   def hi
@@ -155,7 +155,7 @@ When we want to override the gem existing methods with the your own behavior or 
 ___
 ***Override Gem or Plugin with alias_method_chain***: 
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 
   class Person
       def hello
@@ -188,7 +188,7 @@ ___
 ___
 ***Difference between alias_method vs alias_method_chain***:
 
-{% highlight ruby linenos %}
+{% highlight ruby  %}
 
 alias_method_chain :hello, :flanderizer
 

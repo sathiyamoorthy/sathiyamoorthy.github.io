@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-
-    {% include foot.html %}
-  </body>
-</html>
+---
+theme :
+  name : dbyll
+---
+{% include JB/setup %}
+{% include themes/dbyll/default.html %}
