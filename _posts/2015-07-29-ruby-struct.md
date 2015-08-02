@@ -10,6 +10,8 @@ categories:
 - Ruby 
 tags:
 - "Ruby, Struct, Ruby Hash, Ruby Openstruch, Ruby Struct, kishore-mohan, kishore.M, difference between struct vs openstruct vs hash, Why Struct? Not Openstruct or Hash?"
+image:
+  feature: ruby.jpg
 ---
 
 Most of them prefer Hash when we want to store the object with key and value pair, because that's how we learned ruby basics. When we keeping growing we will be well attached with hashes and start dumping the hash concept everywhere.
