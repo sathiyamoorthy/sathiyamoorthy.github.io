@@ -7,7 +7,7 @@ status: publish
 comments: true
 share: true
 categories:
-- Ruby 
+- Ruby
 tags:
 - "Ruby, Struct, Ruby Hash, Ruby Openstruch, Ruby Struct, kishore-mohan, kishore.M, difference between struct vs openstruct vs hash, Why Struct? Not Openstruct or Hash?"
 image:
