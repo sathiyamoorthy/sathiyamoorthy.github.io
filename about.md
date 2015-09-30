@@ -7,7 +7,7 @@ comments: true
   
 ---
 
-I'm a programmer/techie guy. I like building web applications using all standard technologies and huge passion for writing code (preferably open source and on my MacBook Pro).
+I'm a java programmer/techie guy. I like building web applications using all standard technologies and huge passion for writing code (preferably open source and on my MacBook Pro).
 
 I also know a good variety of programming languages too..Ruby, Rails, Angularjs, NodeJS, CI(continous integration), Chef, Puppet etc.. Ruby is my all time favourite and for framwwork offcourse its Rails. I also start working on Devops. 
 
