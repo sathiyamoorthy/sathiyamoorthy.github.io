@@ -22,16 +22,16 @@ gems:
 title : Let's Geek
 tagline: 
 author :
-  name : Kishore Mohan
-  email : kishorevlrtn@gmail.com
-  github : kishore-mohan
-  twitter : kishorevlrtn
+  name : Sathiyamoorthy
+  email : sathyamoorthy.warn6@gmail.com
+  github : sathiyamoorthy
+  twitter : 
   # pinterest: dbtek
-  linkedin: kishorevlrtn
+  linkedin: 
   resume:
   feedburner :
   email_md5: c36d453c7020e4859dd6db667cf44fa8
-  bio: Kishore Mohan<br/>Programmer, Hacker, Rubyist..<br/> Bangalore, India
+  bio: Sathiyamoorthy<br/>Programmer, Hacker, Rubyist..<br/> Bangalore, India
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -99,7 +99,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : kishoremcom
+      short_name : sathiyamoorthy
     livefyre :
       site_id :
     intensedebate :
