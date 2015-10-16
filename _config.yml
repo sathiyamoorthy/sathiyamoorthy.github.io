@@ -19,19 +19,19 @@ gems:
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Geek
+title : Code Geeks
 tagline: 
 author :
   name : Sathiyamoorthy
   email : sathyamoorthy.warn6@gmail.com
   github : sathiyamoorthy
-  twitter : 
+  twitter : dsas
   # pinterest: dbtek
-  linkedin: 
+  linkedin: sathiyamoorthy m
   resume:
   feedburner :
   email_md5: 7d072fe9b989753448337ea1e5f47b00
-  bio: Sathiyamoorthy<br/>Programmer, Hacker, Rubyist..<br/> Bangalore, India
+  bio: Sathiyamoorthy<br/>Java, HL7, Rubyist..<br/> Bangalore, India
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
