@@ -1,0 +1,32 @@
+.sidebar {
+  background-color: #22313F;
+}
+
+.project-btn {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.project-btn a {
+  min-width: 105px;
+}
+
+.page-header {
+  color: #2574A9;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
+article.home h1 a,
+article.home h2 a,
+article.home h3 a,
+article.home h4 a {
+  color: #2574A9;
+}
+
+article.home h1 a:hover,
+article.home h2 a:hover,
+article.home h3 a:hover,
+article.home h4 a:hover {
+  color: #22A7F0;
+}
