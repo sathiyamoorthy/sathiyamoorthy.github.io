@@ -1,6 +1,6 @@
-dbtek.github.io
+sathiyamoorthy.github.io
 ====
 
 My personal blog powered by jekyll-bootstrap-3
 
-[ismaildemirbilek.com](http://ismaildemirbilek.com)
+[sathya-m.com](http://sathya-m.com)
