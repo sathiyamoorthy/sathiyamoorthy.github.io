@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Switch Algorithms While Indexing"
-excerpt: "Why,When & How???"
-date: 2015-10-15
+excerpt: "coming soon.........."
+date: 2015-10-17
 status: publish
 comments: true
 share: true
