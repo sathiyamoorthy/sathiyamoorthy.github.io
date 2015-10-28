@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Table Partition - Way to Improve Performance"
+title: "Table Partition - Way to reduce the cost of an query"
 excerpt: "Why,When & How???"
 date: 2015-10-15
 status: publish
@@ -15,7 +15,7 @@ tags:
 	NOTE: Basic RDBMS knowledge is so vital to understand this concepts.
 
 ## Why?
-Table Partitioning is one of the feasible way to optimize & keep frequently used records in handy to improve each **"SELECT" in #O(n)** (approx.. worst & best cases are applicable based on no.of.records) even a table contains huge number of records.
+Table Partitioning is one of the feasible way to optimize & keep frequently used records in handy to improve each **"SELECT" in #O(n)** (approx.. worst & best cases are applicable based on no.of.records) even a table contains huge number of records. Altimate goal is to reduce the cost of an query.
 
 ## When?
 * It should apply on the tables which contains huge amount of data.
