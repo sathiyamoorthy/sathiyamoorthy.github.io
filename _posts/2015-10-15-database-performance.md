@@ -13,7 +13,7 @@ tags:
 ---
 
 	NOTE: Basic RDBMS knowlege is a vital one before start reading this concepts.
-
+	
 ## Why?
 Table Partitioning is one of the feasible way to optimize & keep frequently used records in handy to improve each **"SELECT" in #O(n)** (approx.. worst & best cases are applicable based on no.of.records) even a table contains huge number of records.
 
