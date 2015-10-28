@@ -3,10 +3,11 @@ layout: post
 title: "Table Partitioning"
 excerpt: "Why,When,Where & How???"
 date: 2015-10-15
+status: publish
 comments: true
 share: true
 categories:
-- "R&D : Optimize Database Design"
+- "R&D"
 tags:
 - "RDBMS"
 ---
