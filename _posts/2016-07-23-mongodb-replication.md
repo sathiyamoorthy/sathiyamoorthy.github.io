@@ -85,7 +85,7 @@ For older version "MONGODB-CR" mechanisum. Current system version is 5 you cant 
 
 #####STEP 8 : (on primary server)
 We are ready to popup a heartbeat to secondary server and arbitery server.
-Open arbiter server's mongod.conf file and make it "journal : enabled : false".
+Open arbiter server mongod.conf file and make it "journal : enabled : false".
 
 	> rs.add("<secondary-server-ip>:<secondary-server-port>")
 	> rs.addArb("<arbiter-server-ip>:<arbiter-server-ip>")
@@ -121,4 +121,4 @@ Stop mongod service on  all the machine & open "mongod.conf" file and add the ge
 Start mongod service on all the machine.
 
 ##Conculusion
-That's it. Mongodb replication is ready to use in a secure way. Keep in mind that always go with an odd number of instance. 3 server replica set can bear up to 1 failure, 5 server replica set can bear up to 2 failure, 7 can bear upto 3.
+Thats it. Mongodb replication is ready to use in a secure way. Keep in mind that always go with an odd number of instance. 3 server replica set can bear up to 1 failure, 5 server replica set can bear up to 2 failure, 7 can bear upto 3.
