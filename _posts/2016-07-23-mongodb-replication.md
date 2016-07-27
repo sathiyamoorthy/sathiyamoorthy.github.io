@@ -14,7 +14,7 @@ tags:
 
 	NOTE: Basic mongodb knowledge is so vital to understand this concepts.
 
-##Requirement 
+## Requirement 
 * Minumum 3 server (primary-master, seconday-slave, arbiterary).
 * Each server should be communicate each other, openSSL.
 
@@ -120,5 +120,5 @@ Stop mongod service on  all the machine & open "mongod.conf" file and add the ge
 
 Start mongod service on all the machine.
 
-##Conculusion
+## Conculusion
 Thats it. Mongodb replication is ready to use in a secure way. Keep in mind that always go with an odd number of instance. 3 server replica set can bear up to 1 failure, 5 server replica set can bear up to 2 failure, 7 can bear upto 3.
