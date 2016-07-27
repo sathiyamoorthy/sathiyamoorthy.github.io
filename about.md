@@ -17,7 +17,7 @@ I will always try to apply the "Operation Research" (OR) terminology and algorit
 
 On this blog, I would like to publish my experience with code snipet in software development practices as well as more intersting topics around my favourite works & tools. I love clean design and building applications & providing services that are both functional and beautiful. To see examples of my work, please visit my [portfolio](https://github.com/sathiyamoorthy?tab=repositories).
 
-I live in Bangalore, India, love to play keyboard, cricket and hanging out with my friends and family.
+I live in Bangalore, India, love to play keyboard, cricket, table tennis and hanging out with friends and family.
 
 You can find me on: 
 

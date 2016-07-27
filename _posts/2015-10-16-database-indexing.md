@@ -2,7 +2,7 @@
 layout: post
 title: "Switch Algorithms While Indexing"
 excerpt: "coming soon.........."
-date: 2015-10-17
+date: 2016-08-05
 status: publish
 comments: true
 share: true
