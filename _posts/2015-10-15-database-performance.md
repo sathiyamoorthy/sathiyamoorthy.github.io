@@ -26,11 +26,13 @@ Table Partitioning is one of the feasible way to optimize & keep frequently used
 It works like Parent & child., Parent table actually doesnt contain any records, only used for child table to inherits based on constraint. Lets start with an real time example "LOCALIZATION"
 
 STEP 1 : 
+	
 	Create Database : "dictionary"
 	Create Parent Table : "words"
 	Parent table Columns : id, en, ch
 
 STEP2 : Create 26 child tables with Rule
+	
 	CREATE RULE words_insert_a AS
 	ON INSERT TO words WHERE
     ( en LIKE "a.%" )
@@ -38,14 +40,17 @@ STEP2 : Create 26 child tables with Rule
     INSERT INTO words_a VALUES (NEW.*);
 
 STEP 3 : Create constraints on each child and inherits with parent.
+	
 	CREATE TABLE words_a (CHECK ( en LIKE 'a.%' )) INHERITS (words);
 
 
 STEP 4: Populate dummy data on words table.
+	
 	Migrated 1263002 translation records into words table.
 
 
 STEP 5: Analyze a cost & total runtime of a query to get a record from 1263002.
+	
 	EXPLAIN ANALYZE SELECT * FROM words WHERE "en" IN ('game') OR "en" LIKE 'game.%'
 
 RESULT
