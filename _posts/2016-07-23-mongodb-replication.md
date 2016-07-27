@@ -102,7 +102,7 @@ STEP 10 : (Use cases)
 * Stop current primary server, make sure that arbiter server remain the same.
 
 STEP 11 : (Security)
-----
+
 * Internal Authentication (security bettween master & slaves)
 * Authorization
 
