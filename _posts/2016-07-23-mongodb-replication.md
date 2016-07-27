@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mongodb(v3.2.8) Replication"
-excerpt: 
+excerpt: Why,How??
 date: 2016-07-23
 status: publish
 comments: true
