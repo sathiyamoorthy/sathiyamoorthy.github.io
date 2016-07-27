@@ -23,29 +23,29 @@ tags:
 * Configure always an odd number of instance to break tie on voting of primary server election.
 * Aribitary server : Just to avoid tie on election. holds no data, no need of high configuration instance, but should be different instance.
 
-#####STEP 1 : (All machine)
+STEP 1 : (All machine)
 Install the latest version of mongodb. walkthrouth [mongodb installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-#####STEP 2 : (All machine)
+STEP 2 : (All machine)
 Make sure that all the server can communicate each other to their mongo shell.
 
 	mongo --host <hostname> --port <portno>
 
 if not connecting open mongod.conf and comment #bindip & change the port randomly.
 
-#####STEP 3 : (All machine)
+STEP 3 : (All machine)
 Open mongod.conf file & add a replica set on all these the machines.
 	
 	replication:
  	replSetName: rep0
 
-#####STEP 4 : (On primary server)
+STEP 4 : (On primary server)
 
 	> cfg = {"_id" : "rep0", "members" : [{"_id" : 0,"host" : "[<primary-machine-ip]:<primary-machine-port>"}]};
 	> rs.initiate(cfg);
 	> rs.status();
 
-#####STEP 5: (on primary server)
+STEP 5: (on primary server)
 create a user on "admin" database for authentication & authenticate it.
 
 	> use admin;
@@ -59,7 +59,7 @@ create a user on "admin" database for authentication & authenticate it.
 	> db.auth("health", "adminpass" );
 	> db.system.users.find();
 
-#####STEP 6 :
+STEP 6 :
 There are two type of authentication mechanisum
 
 * MONGODB-CR
@@ -67,7 +67,7 @@ There are two type of authentication mechanisum
 
 We can rollback to "MONGODB-CR" if needed, For better security go with SCRAN-SHA-1.
 
-#####STEP 7 : (optional - all machine)
+STEP 7 : (optional - all machine)
 For older version "MONGODB-CR" mechanisum. Current system version is 5 you cant get the list of database and authentication in robomongo, so please change to 3 instead of 5
 
 	> use admin;
@@ -83,25 +83,25 @@ For older version "MONGODB-CR" mechanisum. Current system version is 5 you cant 
 	  }
 	);
 
-#####STEP 8 : (on primary server)
+STEP 8 : (on primary server)
 We are ready to popup a heartbeat to secondary server and arbitery server.
 Open arbiter server mongod.conf file and make it "journal : enabled : false".
 
 	> rs.add("<secondary-server-ip>:<secondary-server-port>")
 	> rs.addArb("<arbiter-server-ip>:<arbiter-server-ip>")
 
-#####STEP 9 : (on primary server)
+STEP 9 : (on primary server)
 Make sure that all server connected successfully.
 
 	> rs.status();
 	> rs.conf();
 
-#####STEP 10 : (Use cases)
+STEP 10 : (Use cases)
 
 * Stop mongod servivce on primary server, make sure that secondary server become primary.
 * Stop current primary server, make sure that arbiter server remain the same.
 
-#####STEP 11 : (Security)
+STEP 11 : (Security)
 ----
 * Internal Authentication (security bettween master & slaves)
 * Authorization
@@ -112,7 +112,7 @@ Enrypted base64 "Keyfile" whicl leads the Internal Authentication & Authorizatio
 	chmod 700 /root/mongokey
 	chown mongodb:mongodb /root/mongokey
 
-#####STEP 12 : 
+STEP 12 : 
 Stop mongod service on  all the machine & open "mongod.conf" file and add the generated "keyfile" path.
 
 	security :
